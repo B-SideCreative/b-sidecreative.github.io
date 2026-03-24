@@ -1,0 +1,256 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Montserrat', system-ui, sans-serif;
+  --color-dark-green: #0e231f;
+  --color-light-green: #07493c;
+  --color-white-2: #f0f0f0;
+  --color-black-2: #202020;
+}
+
+/* Animações personalizadas */
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Animações 3D para elementos de fundo - Otimizadas para performance */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) translateZ(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-15px) translateZ(0) scale(1.02);
+  }
+}
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg) translateZ(0);
+  }
+
+  100% {
+    transform: rotate(360deg) translateZ(0);
+  }
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1) translateZ(0);
+  }
+
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05) translateZ(0);
+  }
+}
+
+.animate-float {
+  animation: float ease-in-out infinite;
+  will-change: transform;
+  transform: translateZ(0);
+  /* Force hardware acceleration */
+}
+
+.animate-spin-slow {
+  animation: spin-slow linear infinite;
+  will-change: transform;
+  transform: translateZ(0);
+  /* Force hardware acceleration */
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow ease-in-out infinite;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  /* Force hardware acceleration */
+}
+
+/* Classes para gradientes radiais */
+.bg-radial-gradient {
+  background: radial-gradient(circle at center, var(--tw-gradient-from), var(--tw-gradient-to));
+}
+
+/* Otimizações de performance para dispositivos móveis */
+@media (max-width: 768px) {
+  .animate-float {
+    animation-duration: 10s !important;
+  }
+
+  .animate-spin-slow {
+    animation-duration: 25s !important;
+  }
+
+  .animate-pulse-glow {
+    animation-duration: 8s !important;
+  }
+}
+
+/* Estilos para fundo estrelado */
+.stars-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle infinite ease-in-out;
+}
+
+.star:nth-child(2n) {
+  width: 1px;
+  height: 1px;
+}
+
+.star:nth-child(3n) {
+  width: 3px;
+  height: 3px;
+  animation: twinkle infinite ease-in-out, float 6s infinite ease-in-out;
+}
+
+.star:nth-child(4n) {
+  background: #ffd700;
+  animation: twinkle infinite ease-in-out, float 8s infinite ease-in-out;
+}
+
+.star:nth-child(5n) {
+  background: #87ceeb;
+  animation: twinkle infinite ease-in-out, float 10s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Reduzir motion para usuários que preferem menos animação */
+@media (prefers-reduced-motion: reduce) {
+
+  .animate-float,
+  .animate-spin-slow,
+  .animate-pulse-glow {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    opacity: 0.3 !important;
+  }
+}
+
+.animate-scroll {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  width: max-content;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Estilos para o componente Brands */
+.brands-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.brands-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 1rem;
+  padding: 1rem 0;
+}
+
+/* Media queries para responsividade do componente Brands */
+@media (max-width: 768px) {
+  .brands-container {
+    padding: 0 1rem;
+  }
+  
+  .brands-wrapper {
+    max-width: 100%;
+    padding: 0.5rem 0;
+  }
+}

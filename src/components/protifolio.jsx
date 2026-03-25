@@ -37,7 +37,7 @@ function InstagramCarousel({ title, images }) {
     return (
         <div className="group relative backdrop-blur-xl bg-linear-to-br from-white/20 via-white/10 to-white/5 border border-white/30 rounded-2xl hover:border-white/40 transition-all duration-700 ease-out overflow-hidden shadow-2xl w-full">
             <div className="absolute inset-0 bg-linear-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            
+
             {/* Header do Carrossel */}
             <div className="relative z-10 p-4">
                 <h3 className="text-white font-semibold text-lg group-hover:text-white/90 transition-colors duration-300">{title}</h3>
@@ -140,26 +140,26 @@ export default function Protifolio() {
         {
             src: v1,
             alt: "Edição de Vídeo Promocional",
-            title: "Vídeo Promocional",
-            description: "Edição profissional para campanha de marketing digital"
+            title: "PrevSummit 2025",
+            description: "Edição de vídeo promocional para os eventos PrevSummit e SunsetPrev 2025, com foco em impacto visual, ritmo dinâmico e valorização da identidade do evento."
         },
         {
             src: v2,
             alt: "Motion Graphics",
-            title: "Motion Graphics",
-            description: "Animações e efeitos visuais para redes sociais"
+            title: "PrevSummit 2025",
+            description: "Edição de vídeo promocional para os eventos PrevSummit e SunsetPrev 2025, com foco em impacto visual, ritmo dinâmico e valorização da identidade do evento."
         },
         {
             src: v3,
             alt: "Documentário",
-            title: "Documentário Corporativo",
-            description: "Produção audiovisual completa para empresa"
+            title: "PrevSummit 2025",
+            description: "Produção audiovisual completa para os eventos PrevSummit e SunsetPrev 2025, com foco em narrativa envolvente e qualidade técnica."
         },
         {
             src: v4,
             alt: "Vídeo de Evento",
-            title: "Vídeo de Evento",
-            description: "Cobertura e edição de eventos corporativos e sociais"
+            title: "PrevSummit 2026",
+            description: "Cobertura e edição de eventos corporativos e sociais para os eventos PrevSummit e SunsetPrev 2026, com foco em qualidade e narrativa envolvente."
         },
     ]
 
@@ -167,32 +167,32 @@ export default function Protifolio() {
         {
             src: ins1,
             alt: "Logo Design",
-            title: "Design de Logo",
-            description: "Identidade visual criativa e marcante"
+            title: "Agropet LP",
+            description: "Desenvolvimento de uma identidade visual totalmente nova, priorizando a valorização dos produtos de alta qualidade e conexão com o público regional."
         },
         {
             src: ins2,
-            alt: "Flyer Design",
-            title: "Material Gráfico",
-            description: "Flyers, banners e peças promocionais"
+            alt: "Clínica PlenaVittá",
+            title: "Clínica PlenaVittá",
+            description: "Desenvolvimento de uma nova identidade visual clean voltada ao bem-estar e autocuidado, transmitindo leveza e acolhimento."
         },
         {
             src: ins3,
             alt: "Social Media Design",
-            title: "Posts para Redes Sociais",
-            description: "Design visual para Instagram, Facebook e LinkedIn"
+            title: "Gnomio Estampas",
+            description: "Este projeto é referente à criação da identidade visual da rede social, site e estampas, focado no mercado da moda personalizada."
         },
         {
             src: ins4,
             alt: "Branding",
-            title: "Branding Completo",
-            description: "Desenvolvimento de identidade visual e manual de marca"
+            title: "Sport Life Academia",
+            description: "Produção de materiais estratégicos para o ramo fitness, com foco em estímulo do público à prática de atividade física."
         },
         {
             src: ins5,
             alt: "Embalagem",
-            title: "Design de Embalagem",
-            description: "Criação de embalagens atrativas e funcionais"
+            title: "Clínica PlenaVittá",
+            description: "Criação de peças visuais para rede social para o segmento estético, com foco na sofisticação."
         },
     ]
 

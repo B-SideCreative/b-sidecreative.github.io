@@ -150,13 +150,13 @@ export default function Protifolio() {
             description: "Edição de vídeo promocional para os eventos PrevSummit e SunsetPrev 2025, com foco em impacto visual, ritmo dinâmico e valorização da identidade do evento."
         },
         {
-            src: v3,
+            src: v4,
             alt: "Documentário",
             title: "PrevSummit 2025",
             description: "Produção audiovisual completa para os eventos PrevSummit e SunsetPrev 2025, com foco em narrativa envolvente e qualidade técnica."
         },
         {
-            src: v4,
+            src: v3,
             alt: "Vídeo de Evento",
             title: "PrevSummit 2026",
             description: "Cobertura e edição de eventos corporativos e sociais para os eventos PrevSummit e SunsetPrev 2026, com foco em qualidade e narrativa envolvente."
